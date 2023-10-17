@@ -1,0 +1,7 @@
+P_incidence: int64
+P_tilt: int64
+L_angle: int64
+S_slope: int64
+P_radius: int64
+S_Degree: int64
+Class: object

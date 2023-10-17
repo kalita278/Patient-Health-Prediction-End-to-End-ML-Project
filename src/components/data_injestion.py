@@ -2,7 +2,9 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from dataclasses import dataclasses
+from dataclasses import dataclass
+import pymysql
+from src.components.data_validation import DataValidation
 
 @dataclass
 class DataInjestionConfig:
@@ -15,9 +17,11 @@ class DataInjestion:
         self.injestion_config = DataInjestionConfig()
 
     def  initiate_data_injestion(self):
-        df1 = pd.read_csv('Data\Normal.csv')
-        df2 = pd.read_csv('Data\Type_H.csv')
-        df3 = pd.read_csv('Data\Type_S.csv')
+
+        a = pymysql.connect(user='root',host='127.0.0.1',passwd='mrinal',db='patient_condition')
+        df1 = pd.read_sql_query('select * from normal',a)
+        df2 = pd.read_sql_query('select * from type_h',a)
+        df3 = pd.read_sql_query('select * from type_s',a)
 
         df1['Class']=df1['Class'].replace('Nrmal','Normal')
         df2['Class']=df2['Class'].replace('type_h','Type_H')
@@ -25,7 +29,7 @@ class DataInjestion:
 
         df = pd.concat([df1,df2,df3])
 
-        os.mkdir(os.path.dirname(self.injestion_config.row_data_path),exist_ok=True)
+        os.makedirs(os.path.dirname(self.injestion_config.row_data_path),exist_ok=True)
         df.to_csv(self.injestion_config.row_data_path,index=False,header=True)
 
         train_set,test_set = train_test_split(df,test_size=0.2,random_state=22)
@@ -35,3 +39,10 @@ class DataInjestion:
 
         return(self.injestion_config.train_data_path,
                 self.injestion_config.test_data_path)
+
+if __name__ == '__main__':
+    obj = DataInjestion()
+    train_data, test_data = obj.initiate_data_injestion()
+    data_validation = DataValidation()
+    data_validation.initiate_data_validation(train_data, test_data)
+

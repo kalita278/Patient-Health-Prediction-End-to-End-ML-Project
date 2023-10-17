@@ -17,4 +17,5 @@ sklearn_pandas
 pyyaml
 mlflow
 dvc
--e .
+PyMySql
+#-e .
