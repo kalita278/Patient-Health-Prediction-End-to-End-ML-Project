@@ -37,6 +37,8 @@ class ModelEvaluation:
 
         save_json(self.model_evaluation_config.model_evaluation_filepath, scores)
 
+        return scores
+
         mlflow.set_tracking_uri("https://dagshub.com/kalita278/Patient-Health-Prediction-End-to-End-ML-Project.mlflow")
         os.environ['MLFLOW_TRACKING_USERNAME'] = "kalita278"
         os.environ['MLFLOW_TRACKING_PASSWORD'] = "eb766988711ad6134d253dc8b82c079114a8a36c"
@@ -59,4 +61,4 @@ class ModelEvaluation:
             else:
                 mlflow.sklearn.log_model(model, "model")
 
-        return scores
+        
