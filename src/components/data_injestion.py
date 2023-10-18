@@ -43,14 +43,13 @@ class DataInjestion:
         return(self.injestion_config.train_data_path,
                 self.injestion_config.test_data_path)
 
-if __name__ == '__main__':
-    obj = DataInjestion()
-    train_data, test_data = obj.initiate_data_injestion()
-    data_validation = DataValidation()
-    data_validation.initiate_data_validation(train_data, test_data)
-    transform_obj = DataTransformation()
-    train_arr,test_arr = transform_obj.initiate_data_transformation(train_data, test_data)
-    model_trainer = ModelTrainer()
-    x_train, y_train, x_test, y_test,model,parameter = model_trainer.initiate_model_trainer(train_arr, test_arr)
-    eval = ModelEvaluation()
-    eval.initiate_model_evaluation(x_train, y_train, x_test, y_test,model,parameter)
+#if __name__ == '__main__':
+ #   obj = DataInjestion()
+  #  train_data, test_data = obj.initiate_data_injestion()
+   ##data_validation.initiate_data_validation(train_data, test_data)
+    #transform_obj = DataTransformation()
+    #train_arr,test_arr = transform_obj.initiate_data_transformation(train_data, test_data)
+    #model_trainer = ModelTrainer()
+    #x_train, y_train, x_test, y_test,model,parameter = model_trainer.initiate_model_trainer(train_arr, test_arr)
+    #eval = ModelEvaluation()
+    #eval.initiate_model_evaluation(x_train, y_train, x_test, y_test,model,parameter)
