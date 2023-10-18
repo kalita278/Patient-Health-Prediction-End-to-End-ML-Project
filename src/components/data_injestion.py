@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 import pymysql
 from src.components.data_validation import DataValidation
+from src.components.data_transformation import DataTransformation
 
 @dataclass
 class DataInjestionConfig:
@@ -45,4 +46,6 @@ if __name__ == '__main__':
     train_data, test_data = obj.initiate_data_injestion()
     data_validation = DataValidation()
     data_validation.initiate_data_validation(train_data, test_data)
+    transform_obj = DataTransformation()
+    transform_obj.initiate_data_transformation(train_data, test_data)
 
