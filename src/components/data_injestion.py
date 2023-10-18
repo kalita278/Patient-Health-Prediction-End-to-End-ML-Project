@@ -6,6 +6,7 @@ from dataclasses import dataclass
 import pymysql
 from src.components.data_validation import DataValidation
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataInjestionConfig:
@@ -47,5 +48,7 @@ if __name__ == '__main__':
     data_validation = DataValidation()
     data_validation.initiate_data_validation(train_data, test_data)
     transform_obj = DataTransformation()
-    transform_obj.initiate_data_transformation(train_data, test_data)
+    train_arr,test_arr = transform_obj.initiate_data_transformation(train_data, test_data)
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_model_trainer(train_arr, test_arr)
 
