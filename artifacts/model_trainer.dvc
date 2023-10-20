@@ -1,6 +1,6 @@
 outs:
-- md5: ece4cc8c46042a20dad9cc2b95ffd032.dir
-  size: 48707
+- md5: 2e0ff639d2af2eb8659a06df7a5477fd.dir
+  size: 1152
   nfiles: 1
   hash: md5
   path: model_trainer
