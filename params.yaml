@@ -65,9 +65,9 @@ svc_clss:
   probability: True
 
 KNeighbors:
-  n_neighbors: 5
-  weights: 'uniform'
+  n_neighbors: 15
+  weights: 'distance'
   algorithm: 'auto'
-  leaf_size: 30
+  leaf_size: 1
   p: 2
-  metric: 'minkowski'
+  metric: 'euclidean'

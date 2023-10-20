@@ -2,3 +2,5 @@
     remote = origin
 ['remote "origin"']
     url = https://DagsHub.com/kalita278/Patient-Health-Prediction-End-to-End-ML-Project.dvc
+['remote "newremote"']
+    url = https://github.com/kalita278/Patient-Health-Prediction-End-to-End-ML-Project.git
