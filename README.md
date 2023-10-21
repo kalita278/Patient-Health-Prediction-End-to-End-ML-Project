@@ -32,7 +32,7 @@ Encoded the target variable and scaled the independent variable using label enco
 
 **MODEL BUILDING, EVALUATION AND IMPROVEMENT:**
 
-Used k neirest neighbour algorithm to detect the patient condition and evaluate the model using confusion metrix, accuracy score, recall score, precision score and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~2%.
+Used k neirest neighbour,SVC,Logistic regression,Naive Bayes, Decision Tree, Random Forest, Ada boost and Gradient Boost algorithm to detect the patient condition and evaluate the model using confusion metrix, accuracy score, recall score, precision score and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~5%.
 
 ## **MLOPS:**
 Used mlops tools to version the model and data that becomes scalable and reproducable in future.
@@ -54,12 +54,12 @@ MLFlow, DVC, GIT, Dagshub
 ### **How to use it**
 To use this project, first clone the repo on your device using the command below:
 
-git clone https://github.com/kalita278/Telecom_Customer_Churn_Prediction_EndToEnd_ML_Project.git
+git clone https://github.com/kalita278/Patient-Health-Prediction-End-to-End-ML-Project.git
 
 ## **Installation**
 pip install -r requirements.txt
 
 ## **How to run the project**
-1. Run: "streamlit run churn_prediction_web_app.py" to get the localhost server link. 
+1. Run: "streamlit run prediction_web_app.py" to get the localhost server link. 
 
 2. Go to browser and load  http://127.0.0.1:8501/
