@@ -24,7 +24,7 @@ Combined all three files to create a single file with all the relevant variables
 
 **DATA ANALYSIS:**
 
-Here, performed uni-variate, bivariate, and multivariate analysis of the dataset, for example, 5 point summary of the continuous variable, pair plot, joint plot, correlation plot, and boxplot to detect outliers.
+Here, performed uni-variate, bivariate, and multivariate analysis of the dataset, for example, 5-point summary of the continuous variable, pair plot, joint plot, correlation plot, and boxplot to detect outliers.
 
 **DATA PREPROCESSING:**
 
@@ -32,10 +32,10 @@ Encoded the target variable and scaled the independent variable using label enco
 
 **MODEL BUILDING, EVALUATION AND IMPROVEMENT:**
 
-Used k neirest neighbour,SVC,Logistic regression,Naive Bayes, Decision Tree, Random Forest, Ada boost and Gradient Boost algorithm to detect the patient condition and evaluate the model using confusion metrix, accuracy score, recall score, precision score and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~5%.
+Used k nearest neighbour, SVC, Logistic regression, Naive Bayes, Decision Tree, Random Forest, Ada boost, and Gradient Boost algorithm to detect the patient condition and evaluate the model using confusion matrix, accuracy score, recall score, precision score, and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~5%.
 
 ## **MLOPS:**
-Used mlops tools to version the model and data that becomes scalable and reproducable in future.
+Used mlops tools to version the model and data that becomes scalable and reproducible in the future.
 
 ## **MLOPS Tools:**
 MLFlow, DVC, GIT, Dagshub
@@ -62,4 +62,4 @@ pip install -r requirements.txt
 ## **How to run the project**
 1. Run: "streamlit run prediction_web_app.py" to get the localhost server link. 
 
-2. Go to browser and load  http://127.0.0.1:8501/
+2. Go to the browser and load  http://127.0.0.1:8501/
