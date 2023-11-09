@@ -3,7 +3,7 @@
 
 **DOMAIN**: Medical
 
-**CONTEXT:** Medical research university X is undergoing a deep research on patients with certain conditions. University has an internal AI team. Due  to  confidentiality  the  patient’s  details  and  the  conditions  are  masked  by  the  client  by  providing  different  datasets  to  the  AI  team  for developing a AIML model which can predict the condition of the patient depending on the received test results.
+**CONTEXT:** Medical Research University X is undergoing a deep research on patients with certain conditions. University has an internal AI team. Due  to  confidentiality  the  patient’s  details  and  conditions  are  masked  by  the  client  by  providing  different  datasets  to  the  AI  team  for developing a AIML model which can predict the condition of the patient depending on the received test results.
 
 **DATA  DESCRIPTION**: The  data  consists  of  biomechanics  features  of  the  patients  according  to  their  current  conditions.  Each  patient  is represented in the data set by six biomechanics attributes derived from the shape and orientation of the condition to their body part. 
 
@@ -20,7 +20,7 @@
 
 **DATA PREPARATION AND EXPLORATION:**
 
-Combined all three files to create a single file with all the relevant variables and perform the necessary data quality checks and cleaning. In data cleaning, identified the missing values/unexpected values and outliers in the dataset (if any) and impute that with the mean value. Also, make sure that data types of the variables are appropriate as required for our analysis.
+Combined all three files to create a single file with all the relevant variables and perform the necessary data quality checks and cleaning. In data cleaning, identified the missing values/unexpected values and outliers in the dataset (if any) and impute that with the mean value. Also, make sure that the data types of the variables are appropriate as required for our analysis.
 
 **DATA ANALYSIS:**
 
@@ -32,7 +32,7 @@ Encoded the target variable and scaled the independent variable using label enco
 
 **MODEL BUILDING, EVALUATION AND IMPROVEMENT:**
 
-Used k nearest neighbour, SVC, Logistic regression, Naive Bayes, Decision Tree, Random Forest, Ada boost, and Gradient Boost algorithm to detect the patient condition and evaluate the model using confusion matrix, accuracy score, recall score, precision score, and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~5%.
+Used k nearest neighbor, SVC, Logistic regression, Naive Bayes, Decision Tree, Random Forest, Ada boost, and Gradient Boost algorithm to detect the patient condition and evaluate the model using confusion matrix, accuracy score, recall score, precision score, and f1 score. Further tunned the model using GridsearchCV and increased the accuracy of the model by almost ~5%.
 
 ## **MLOPS:**
 Used mlops tools to version the model and data that becomes scalable and reproducible in the future.
